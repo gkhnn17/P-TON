@@ -1,0 +1,2 @@
+wqWzQLrUvAvADmFT
+mongodb+srv://gokhand:<password>@atlascluster.tyzvfvv.mongodb.net/?retryWrites=true&w=majority

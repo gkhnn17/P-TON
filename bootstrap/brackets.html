@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+        crossorigin="anonymous">
+        <title> Table-Alerts</title>
+        
+        <style>
+            body{
+                padding: 70px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        
+
+        <div class="modal fade" id="myModal"><!--fade effect-->
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Model1</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">Lorem ipsum dolor sit.</div>   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>   
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="button"
+        data-toggle="modal"
+        data-target="#myModal2">
+        Open Modal
+        </button>
+        
+        <div class="modal fade" id="myModal2"><!--fade effect-->
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Model2.</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">Lorem ipsum dolor sit.</div>   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        
+
+
+        <br><br>
+
+        <div class="modal fade" id="myModal3"><!--fade effect-->
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Model3</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">Lorem ipsum dolor sit.</div>   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>   
+                </div>
+            </div>
+        </div>
+
+        <button id="btnModal" class="btn btn-primary" type="button">
+        Open Modal3
+        </button>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" 
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+        <script>
+            $("#myModal").modal("show")
+
+            $("#btnModal").click(function(){
+                $("#myModal3").modal("show");
+            });
+
+            $("#btnModal").click(function(){
+                $("#myModal3").modal("show");
+                console.log("click")
+            });
+
+
+            
+            $("#myModal3").on("hide.bs.modal",function(e){
+                console.log("hide");
+            });
+            $("#myModal3").on("show.bs.modal",function(e){
+                console.log("show");
+            });
+            $("#myModal3").on("shown.bs.modal",function(e){
+                console.log("shown");
+            });
+            $("#myModal3").on("hidden.bs.modal",function(e){
+                console.log("hidden");
+            });
+
+        </script>
+
+    </body>
